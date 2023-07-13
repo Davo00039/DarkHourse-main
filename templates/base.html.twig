@@ -9,10 +9,35 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
             integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
             crossorigin="anonymous">
+
+            <link rel="stylesheet" href="{{asset('css/adminindex.css')}}"/>
+
+            
         {% endblock %}
+        
+
+
+        
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        
+    <div id="logout">
+        
+        <a href="{{path('app_logout')}}"  style="float:right; color:black"><span> Logout </span></a>
+        
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="{{path('app_indexadmin')}}"><span>HOME</span></a></li>
+            <li><a href="{{path('app_ds_san_pham')}}"><span>PRODUCT</span></a></li>
+            <li><a href="{{path('app_ds_user')}}"><span>ACCOUNT</span></a></li>
+            <li><a href="{{path('app_ds_feedback')}}"><span>FEEDBACK</span></a></li>
+            <li><a ><span>INVOICE</span></a></li>
+        </ul>
+    </div>
+    {% block body %}
+    {% endblock %}
+    
+    {% block javascripts %}{% endblock %}
     </body>
 </html>
