@@ -1,0 +1,54 @@
+{# {% form_theme sp_form 'bootstrap_5_layout.html.twig'%} #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SanPham!{% endblock %}
+
+{% block body %}
+
+
+
+<a href="{{path('app_san_pham')}}" class="btn btn-primary" style="float:right;margin-right: 5px "> Add</a> 
+
+
+<div class="container">
+
+    <table class="table" style="text-align: center"
+        <thead>
+            <tr >
+                <td> No </td>
+                <td> Product Code  </td>
+                <td> Photo </td>
+                <td> Product Name </td>
+                <td> Price </td>
+                <td> Act </td>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for sp in data %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{sp.getId()}}</td>
+                    <td><img src="{{asset('uploads/sanpham/' ~ sp.getPhoto())}}" height="150" /></td>
+                    <td>{{sp.getName()}}</td>
+                    <td>{{sp.getGia()}}</td>
+                    <td>
+                        <a href="{{path('app_edit_san_pham',{'id':sp.getId()})}}" class="btn btn-danger"> Edit</a>
+                        <a href="javascript:deletesp('{{path('app_delete_san_pham',{'id':sp.getId()})}}')" class="btn btn-warning"> Delete</a> 
+                        
+                    </td>
+                </tr>
+             {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script>
+    function deletesp(url){
+        if(confirm("Do you delete product?")){
+            window.location.href = url;
+        }
+    }
+</script>
+{% endblock %}

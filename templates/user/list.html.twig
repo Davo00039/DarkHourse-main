@@ -1,0 +1,51 @@
+{# {% form_theme User_form 'bootstrap_5_layout.html.twig'%} #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Account list{% endblock %}
+
+{% block body %}
+
+<a href="{{path('app_user')}}" class="btn btn-primary" style="float:right;margin-right: 5px "> Add</a> 
+
+<div class="container">
+
+    <table class="table" style="text-align: center"
+        <thead>
+            <tr >
+                <td> STT </td>
+                <td> Account Code </td>
+                <td> Username </td>
+                <td> First Name </td>
+                <td> Last Name </td>
+                <td> Act </td>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for user in data %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{user.getId()}}</td>
+                    <td>{{user.getUsername()}}</td>
+                    <td>{{user.getFirstName()}}</td>
+                    <td>{{user.getLastName()}}</td>
+                    <td>
+                        <a href="{{path('app_edit_user',{'id':user.getId()})}}" class="btn btn-danger"> Edit</a>
+                        <a href="javascript:deleteuser('{{path('app_delete_user',{'id':user.getId()})}}')" class="btn btn-warning"> Delete</a> 
+                        
+                    </td>
+                </tr>
+             {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script>
+    function deleteuser(url){
+        if(confirm("Do you delete user?")){
+            window.location.href = url;
+        }
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,83 @@
+body{
+    background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgba(153,202,251,1) 100.2% );
+}
+
+#form{
+    width: 500px; 
+    height: 600px; 
+    margin: auto;
+    margin-top: 3%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family:Helvetica;
+}
+#post{
+    border-radius: 2%;
+    font-family:Helvetica;
+}
+
+#title{
+    background-color:rgb(169, 218, 255);
+    padding: 10%;
+}
+#welcome{
+    font-size: 50px;
+    font-weight:300;
+    text-align: center; 
+    color: black;
+    font-family:Helvetica;
+}
+
+#userlogin{
+    text-align: center;
+    font-size: 25px;
+    font-family:sans-serif;
+}
+
+#User{
+    margin: 5% 30% 5% 28%;
+    font-family:sans-serif;
+    color: silver;
+    font-size: 20px;
+}
+
+#pass{
+    margin: 5% 30% 5% 28%;
+    font-family:sans-serif;
+    color: silver;
+    font-size: 20px;
+}
+
+#inputUsername{
+    font-size: large;
+    border: 0px solid;
+    border-radius: 5px;
+    padding: 2%;
+    background-color: white;
+    border-bottom: 1px solid;
+    
+}
+
+
+#inputPassword{
+    font-size: large;
+    border: 0px solid;
+    border-radius: 5px;
+    padding: 2%;
+    background-color: white;
+    border-bottom: 1px solid;
+}
+
+#submit{
+    margin: 0% 25% 0% 38%;
+    font-size: large;
+    padding: 5px 40px 5px 40px;
+    background-color:rgb(169, 218, 255);
+    border: 0px;
+    border-radius: 15px;
+}
+
+#lable{
+    margin-left: 30%;
+}
+

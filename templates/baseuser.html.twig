@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      {# {% block title %}Beautiflie{% endblock %} #}
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+      {% block stylesheets %}
+      <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+      <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
+      <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css"/>
+      {# <img src="{{ asset('Images/fevicon.png') }}" alt="Fevicon"/> #}
+      <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+      <link href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet"/>
+      <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+      {% endblock %}
+        
+
+
+        
+    </head>
+    <body>
+        
+    {# <div id="logout">
+        
+        <a href="{{path('app_logout')}}"  style="float:right; color:black"><span> Logout </span></a>
+        
+    </div> #}
+   <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-light bg-light justify-content-between">
+               <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="index.html">Home</a>
+                  {# <a href="products.html.twig">Products</a> #}
+                  <a href="{{path('app_products')}}"> Products</a>
+                  <a href="about.html">About</a>
+                  <a href="client.html">Client</a>
+                  <a href="{{path('app_contact')}}">Contact</a>
+               </div>
+               <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
+               <a class="logo" href="index.html"><img src="images/logo.png"></a></a>
+               <form class="form-inline ">
+                  <div class="login_text">
+                     <ul>
+                        <li><a href="#"><img src="images/user-icon.png"></a></li>
+                        <li><a href="#"><img src="images/bag-icon.png"></a></li>
+                        <li><a href="{{path('app_products')}}"><img src="images/search-icon.png"></a></li>
+                        <li><a href=""{{path('app_logout')}}" style="float:right; color:black""><img src="images/logout.png" width="30px"></a></li>
+                     </ul>
+                  </div>
+               </form>
+            </nav>  
+         </div>
+      </div>
+
+     
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      
+    {% block body %}
+
+
+    {% endblock %}
+    
+    {% block footer %}
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+            <div class="contact_section_2">
+               <div class="row">
+                  <div class="col-sm-4">
+                     <h3 class="address_text">Contact Us</h3>
+                     <div class="address_bt">
+                        <ul>
+                           <li>
+                              <a href="#">
+                              <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Address : Loram Ipusm</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : +01 1234567890</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : demo@gmail.com</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="footer_logo_1"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+                     <p class="dummy_text">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="main">
+                        <h3 class="address_text">Best Products</h3>
+                        <p class="ipsum_text">dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="social_icon">
+               <ul>
+                  <li>
+                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+         </div>
+      </div>
+
+    {# <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+         </div>
+      </div>
+       <div class="social_icon">
+               <ul>
+                  <li>
+                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+               </ul>
+            </div> #}
+    {% endblock %}
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>

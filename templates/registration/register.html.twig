@@ -1,0 +1,50 @@
+{% form_theme registrationForm 'bootstrap_5_layout.html.twig'%}
+{# {% extends 'base.html.twig' %} #}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<body>
+<div class="container" >
+    <div id="title">
+        <p id="welcome">WELCOME</p>
+    </div>
+    <div id="box">
+        <div id="user">
+            <p id="userregis">USER REGISTER</p>
+        </div>
+        <div id="user">
+            {{ form_start(registrationForm) }}
+        <div id="user">
+            {{ form_row(registrationForm.username) }}
+        </div>
+        <div id="user">
+            {{ form_row(registrationForm.first_name) }}
+        </div>
+        <div id="user">
+            {{ form_row(registrationForm.last_name) }}
+        </div>
+        <div id="user">
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Password'
+                }) }}
+        </div>
+        <div id="user">
+            {{ form_row(registrationForm.agreeTerms) }}
+        </div>
+    </div>
+        <div>
+            <button type="submit" id="button">Register</button>
+        </div>
+    {{ form_end(registrationForm) }}
+    </div>
+    <div id="login">
+        <lable id="lable">Already have an account?</lable><a href="{{path('app_login')}}">Sign In</a>
+    </div>
+</div>
+</body>
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/adminregis.css')}}"/>
+{% endblock %}

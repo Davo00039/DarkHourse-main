@@ -1,0 +1,40 @@
+
+
+#tabs{
+    width: 1518px;
+    background-color:white;
+    font-size: large;
+}
+
+
+a{
+    color:white;
+    text-decoration: none;
+    
+    font-family:Arial, Helvetica, sans-serif;
+    /* font-size: larger; */
+}
+a:hover{
+    color: rgb(135, 134, 134);
+}
+
+a.menu{
+    color:white;
+    font-size: larger;
+    font-weight: 500;
+}
+
+ul {
+    background-color: cornflowerblue;
+    list-style-type: none;
+    text-align: center;
+    color: white;
+  }
+li {
+    color: white;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -5px;
+}
