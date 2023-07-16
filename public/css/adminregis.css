@@ -1,6 +1,6 @@
-body{
+/* body{
     background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgba(153,202,251,1) 100.2% );
-}
+} */
 
 .container{
     margin: auto;
@@ -13,7 +13,7 @@ body{
 
 #title{
     text-align: center;
-    background-color: rgb(169, 218, 255);
+    /* background-color: rgb(169, 218, 255); */
     padding: 7%;
 }
 
@@ -23,7 +23,7 @@ body{
 }
 
 #user{
-    margin: 5% 0% 5% 0%;
+    margin: 5% 0% 5% 10%;
     color: silver;
 }
 

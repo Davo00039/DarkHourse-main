@@ -49,7 +49,7 @@ class UserController extends AbstractController
             "data"=>$lSp
         ]);
     }
-
+    
     #[Route('/user/{id}', name: 'app_edit_user')]
     public function edit(EntityManagerInterface $em, int $id, Request $req): Response
     {

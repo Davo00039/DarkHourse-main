@@ -38,7 +38,7 @@
         </div>
     {{ form_end(registrationForm) }}
     </div>
-    <div id="login">
+    <div style="text-align: center; margin: 15px">
         <lable id="lable">Already have an account?</lable><a href="{{path('app_login')}}">Sign In</a>
     </div>
 </div>
@@ -46,5 +46,5 @@
 {% endblock %}
 
 {% block stylesheets %}
-<link rel="stylesheet" href="{{asset('css/adminregis.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/adminregis.css')}}"/>
 {% endblock %}
